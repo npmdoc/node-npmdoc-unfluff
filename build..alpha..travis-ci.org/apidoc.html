@@ -1,0 +1,1077 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/ageitgey/node-unfluff"
+
+    >unfluff (v1.1.0)</a>
+</h1>
+<h4>A web page content extractor</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unfluff">module unfluff</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.lazy">
+            function <span class="apidocSignatureSpan">unfluff.</span>lazy
+            <span class="apidocSignatureSpan">(html, language)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">unfluff.</span>extractor</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unfluff.extractor">module unfluff.extractor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.author">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>author
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.calculateBestNode">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>calculateBestNode
+            <span class="apidocSignatureSpan">(doc, lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.canonicalLink">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>canonicalLink
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.copyright">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>copyright
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.date">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>date
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.description">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>description
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.favicon">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>favicon
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.image">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>image
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.keywords">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>keywords
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.lang">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>lang
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.links">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>links
+            <span class="apidocSignatureSpan">(doc, topNode, lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.publisher">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>publisher
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.softTitle">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>softTitle
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.tags">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>tags
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.text">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>text
+            <span class="apidocSignatureSpan">(doc, topNode, lang)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.title">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>title
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.extractor.videos">
+            function <span class="apidocSignatureSpan">unfluff.extractor.</span>videos
+            <span class="apidocSignatureSpan">(doc, topNode)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unfluff" id="apidoc.module.unfluff">module unfluff</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.lazy" id="apidoc.element.unfluff.lazy">
+        function <span class="apidocSignatureSpan">unfluff.</span>lazy
+        <span class="apidocSignatureSpan">(html, language)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lazy = function (html, language) {
+  return {
+    title: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.title_ ? this.title_ : this.title_ = extractor.title(doc);
+    },
+    softTitle: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.softTitle_ ? this.softTitle_ : this.softTitle_ = extractor.softTitle(doc);
+    },
+    date: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.date_ ? this.date_ : this.date_ = extractor.date(doc);
+    },
+    copyright: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.copyright_ ? this.copyright_ : this.copyright_ = extractor.copyright(doc);
+    },
+    author: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.author_ ? this.author_ : this.author_ = extractor.author(doc);
+    },
+    publisher: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.publisher_ ? this.publisher_ : this.publisher_ = extractor.publisher(doc);
+    },
+    favicon: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.favicon_ ? this.favicon_ : this.favicon_ = extractor.favicon(doc);
+    },
+    description: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.description_ ? this.description_ : this.description_ = extractor.description(doc);
+    },
+    keywords: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.keywords_ ? this.keywords_ : this.keywords_ = extractor.keywords(doc);
+    },
+    lang: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.language_ ? this.language_ : this.language_ = language || extractor.lang(doc);
+    },
+    canonicalLink: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.canonicalLink_ ? this.canonicalLink_ : this.canonicalLink_ = extractor.canonicalLink(doc);
+    },
+    tags: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.tags_ ? this.tags_ : this.tags_ = extractor.tags(doc);
+    },
+    image: function () {
+      var doc;
+      doc = getParsedDoc.call(this, html);
+      return null != this.image_ ? this.image_ : this.image_ = extractor.image(doc);
+    },
+    videos: function () {
+      var doc, topNode;
+      if (null != this.videos_)
+        return this.videos_;
+      doc = getCleanedDoc.call(this, html);
+      topNode = getTopNode.call(this, doc, this.lang());
+      return this.videos_ = extractor.videos(doc, topNode);
+    },
+    text: function () {
+      var doc, topNode;
+      if (null != this.text_)
+        return this.text_;
+      doc = getCleanedDoc.call(this, html);
+      topNode = getTopNode.call(this, doc, this.lang());
+      return this.text_ = extractor.text(doc, topNode, this.lang());
+    },
+    links: function () {
+      var doc, topNode;
+      if (null != this.links_)
+        return this.links_;
+      doc = getCleanedDoc.call(this, html);
+      topNode = getTopNode.call(this, doc, this.lang());
+      return this.links_ = extractor.links(doc, topNode, this.lang());
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x22;favicon&#x22;: &#x22;http://cdn1.vox-cdn.com/community_logos/42931/favicon.ico&#x22;,
+  &#x22;links&#x22;: [
+    { &#x22;text&#x22;: &#x22;Six Thirty&#x22;, &#x22;href&#x22;: &#x22;http://www.sixthirty.co/&#x22; }
+  ]
+}
+```
+
+#### `extractor.<span class="apidocCodeKeywordSpan">lazy</span>(html, language)`
+
+Lazy version of `extractor(html, language)`.
+
+The text extraction algorithm can be somewhat slow on large documents.  If you
+only need access to elements like `title` or `image`, you can use the
+lazy extractor to get them more quickly without running the full processing
+pipeline.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unfluff.extractor" id="apidoc.module.unfluff.extractor">module unfluff.extractor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.author" id="apidoc.element.unfluff.extractor.author">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>author
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">author = function (doc) {
+  var authorCandidates, authorList, cache$, cache$1, cache$2, cache$3, cache$4, cache$5, fallbackAuthor;
+  authorCandidates = doc(&#x22;meta[property=&#x27;article:author&#x27;],     meta[property=&#x27;og:article:author&#x27;], meta[name=&#x27;author&#x27;],     meta
+[name=&#x27;dcterms.creator&#x27;],     meta[name=&#x27;DC.creator&#x27;],     meta[name=&#x27;DC.Creator&#x27;],     meta[name=&#x27;dc.creator&#x27;],     meta[name=&#x27;
+creator&#x27;]&#x22;);
+  authorList = [];
+  authorCandidates.each(function () {
+    var author, cache$, cache$1;
+    author = null != (cache$ = doc(this)) &#x26;&#x26; null != (cache$1 = cache$.attr(&#x27;content&#x27;)) ? cache$1.trim() : void 0;
+    if (author)
+      return authorList.push(author);
+  });
+  if (authorList.length === 0) {
+    fallbackAuthor = (null != (cache$ = doc(&#x22;span[class*=&#x27;author&#x27;]&#x22;).first()) ? cache$.text() : void 0) || (null != (cache$1 = doc
+(&#x22;p[class*=&#x27;author&#x27;]&#x22;).first()) ? cache$1.text() : void 0) || (null != (cache$2 = doc(&#x22;div[class*=&#x27;author&#x27;]&#x22;).first()) ? cache$2
+.text() : void 0) || (null != (cache$3 = doc(&#x22;span[class*=&#x27;byline&#x27;]&#x22;).first()) ? cache$3.text() : void 0) || (null != (cache$4 =
+doc(&#x22;p[class*=&#x27;byline&#x27;]&#x22;).first()) ? cache$4.text() : void 0) || (null != (cache$5 = doc(&#x22;div[class*=&#x27;byline&#x27;]&#x22;).first()) ? cache
+$5.text() : void 0);
+    if (fallbackAuthor)
+      authorList.push(cleanText(fallbackAuthor));
+  }
+  return authorList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+data = extractor.lazy(my_html_data, &#x27;en&#x27;);
+
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.<span class="apidocCodeKeywordSpan">author</span>());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.calculateBestNode" id="apidoc.element.unfluff.extractor.calculateBestNode">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>calculateBestNode
+        <span class="apidocSignatureSpan">(doc, lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">calculateBestNode = function (doc, lang) {
+  var bottomNegativescoreNodes, cnt, i, negativeScoring, nodesNumber, nodesToCheck, nodesWithText, parentNodes, startingBoost, topNode
+, topNodeScore;
+  topNode = null;
+  nodesToCheck = doc(&#x27;p, pre, td&#x27;);
+  startingBoost = 1;
+  cnt = 0;
+  i = 0;
+  parentNodes = [];
+  nodesWithText = [];
+  nodesToCheck.each(function () {
+    var highLinkDensity, node, textNode, wordStats;
+    node = doc(this);
+    textNode = node.text();
+    wordStats = stopwords(textNode, lang);
+    highLinkDensity = isHighlinkDensity(doc, node);
+    if (wordStats.stopwordCount &#x3e; 2 &#x26;&#x26; !highLinkDensity)
+      return nodesWithText.push(node);
+  });
+  nodesNumber = nodesWithText.length;
+  negativeScoring = 0;
+  bottomNegativescoreNodes = nodesNumber * .25;
+  _.each(nodesWithText, function (node) {
+    var booster, boostScore, negscore, parentNode, parentParentNode, textNode, upscore, wordStats;
+    boostScore = 0;
+    if (isBoostable(doc, node, lang) === true)
+      if (cnt &#x3e;= 0) {
+        boostScore = 1 / startingBoost * 50;
+        startingBoost += 1;
+      }
+    if (nodesNumber &#x3e; 15)
+      if (nodesNumber - i &#x3c;= bottomNegativescoreNodes) {
+        booster = bottomNegativescoreNodes - (nodesNumber - i);
+        boostScore = -1 * Math.pow(booster, 2);
+        negscore = Math.abs(boostScore) + negativeScoring;
+        if (negscore &#x3e; 40)
+          boostScore = 5;
+      }
+    textNode = node.text();
+    wordStats = stopwords(textNode, lang);
+    upscore = Math.floor(wordStats.stopwordCount + boostScore);
+    parentNode = node.parent();
+    updateScore(parentNode, upscore);
+    updateNodeCount(parentNode, 1);
+    if (parentNodes.indexOf(parentNode[0]) === -1)
+      parentNodes.push(parentNode[0]);
+    parentParentNode = parentNode.parent();
+    if (parentParentNode) {
+      updateNodeCount(parentParentNode, 1);
+      updateScore(parentParentNode, upscore / 2);
+      if (parentNodes.indexOf(parentParentNode[0]) === -1)
+        parentNodes.push(parentParentNode[0]);
+    }
+    cnt += 1;
+    return i += 1;
+  });
+  topNodeScore = 0;
+  _.each(parentNodes, function (e) {
+    var score;
+    score = getScore(doc(e));
+    if (score &#x3e; topNodeScore) {
+      topNode = e;
+      topNodeScore = score;
+    }
+    if (topNode === null)
+      return topNode = e;
+  });
+  return doc(topNode);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.canonicalLink" id="apidoc.element.unfluff.extractor.canonicalLink">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>canonicalLink
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canonicalLink = function (doc) {
+  var tag;
+  tag = doc(&#x27;link[rel=canonical]&#x27;);
+  if (null != tag)
+    return tag.attr(&#x27;href&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.<span class="apidocCodeKeywordSpan">canonicalLink</span>());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.favicon());
+```
+
+Some of these data elements require calculating intermediate representations
+of the html document. Everything is cached so looking up multiple data elements
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.copyright" id="apidoc.element.unfluff.extractor.copyright">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>copyright
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copyright = function (doc) {
+  var cache$, copyright, copyrightCandidates, text;
+  copyrightCandidates = doc(&#x22;p[class*=&#x27;copyright&#x27;], div[class*=&#x27;copyright&#x27;], span[class*=&#x27;copyright&#x27;], li[class*=&#x27;copyright&#x27;],
+p[id*=&#x27;copyright&#x27;], div[id*=&#x27;copyright&#x27;], span[id*=&#x27;copyright&#x27;], li[id*=&#x27;copyright&#x27;]&#x22;);
+  text = null != copyrightCandidates &#x26;&#x26; null != (cache$ = copyrightCandidates.first()) ? cache$.text() : void 0;
+  if (!text) {
+    text = doc(&#x27;body&#x27;).text().replace(/\s*[\r\n]+\s*/g, &#x27;. &#x27;);
+    if (!(text.indexOf(&#x27;\xa9&#x27;) &#x3e; 0))
+      return null;
+  }
+  copyright = text.replace(/.*?©(\s*copyright)?([^,;:.|\r\n]+).*/gi, &#x27;$2&#x27;).trim();
+  return cleanText(copyright);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+data = extractor.lazy(my_html_data, &#x27;en&#x27;);
+
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.<span class="apidocCodeKeywordSpan">copyright</span>());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.date" id="apidoc.element.unfluff.extractor.date">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>date
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (doc) {
+  var cache$, cache$1, cache$2, cache$3, cache$4, dateCandidates;
+  dateCandidates = doc(&#x22;meta[property=&#x27;article:published_time&#x27;],     meta[itemprop*=&#x27;datePublished&#x27;], meta[name=&#x27;dcterms.modified
+&#x27;],     meta[name=&#x27;dcterms.date&#x27;],     meta[name=&#x27;DC.date.issued&#x27;],  meta[name=&#x27;dc.date.issued&#x27;],     meta[name=&#x27;dc.date.modified
+&#x27;], meta[name=&#x27;dc.date.created&#x27;],     meta[name=&#x27;DC.date&#x27;],     meta[name=&#x27;DC.Date&#x27;],     meta[name=&#x27;dc.date&#x27;],     meta[name=&#x27;date
+&#x27;],     time[itemprop*=&#x27;pubDate&#x27;],     time[itemprop*=&#x27;pubdate&#x27;],     span[itemprop*=&#x27;datePublished&#x27;],     span[property*=&#x27;datePublished
+&#x27;],     p[itemprop*=&#x27;datePublished&#x27;],     p[property*=&#x27;datePublished&#x27;],     div[itemprop*=&#x27;datePublished&#x27;],     div[property*=&#x27;datePublished
+&#x27;],     li[itemprop*=&#x27;datePublished&#x27;],     li[property*=&#x27;datePublished&#x27;],     time,     span[class*=&#x27;date&#x27;],     p[class*=&#x27;date&#x27;],
+div[class*=&#x27;date&#x27;]&#x22;);
+  return (null != dateCandidates &#x26;&#x26; null != (cache$ = dateCandidates.first()) &#x26;&#x26; null != (cache$1 = cache$.attr(&#x27;content&#x27;)) ? cache
+$1.trim() : void 0) || (null != dateCandidates &#x26;&#x26; null != (cache$2 = dateCandidates.first()) &#x26;&#x26; null != (cache$3 = cache$2.attr(&#x27;
+datetime&#x27;)) ? cache$3.trim() : void 0) || cleanText(null != dateCandidates &#x26;&#x26; null != (cache$4 = dateCandidates.first()) ? cache
+$4.text() : void 0) || null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+extractor = require(&#x27;unfluff&#x27;);
+
+data = extractor.lazy(my_html_data, &#x27;en&#x27;);
+
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.<span class="apidocCodeKeywordSpan">date</span>());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.description" id="apidoc.element.unfluff.extractor.description">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>description
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">description = function (doc) {
+  var cache$, cache$1, tag;
+  tag = doc(&#x22;meta[name=description], meta[property=&#x27;og:description&#x27;]&#x22;);
+  if (null != tag &#x26;&#x26; null != (cache$ = tag.first()) &#x26;&#x26; null != (cache$1 = cache$.attr(&#x27;content&#x27;)))
+    return cache$1.trim();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.<span class="apidocCodeKeywordSpan">description</span>());
+console.log(data.favicon());
+```
+
+Some of these data elements require calculating intermediate representations
+of the html document. Everything is cached so looking up multiple data elements
+and looking them up multiple times should be as fast as possible.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.favicon" id="apidoc.element.unfluff.extractor.favicon">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>favicon
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">favicon = function (doc) {
+  var tag;
+  tag = doc(&#x27;link&#x27;).filter(function () {
+    var cache$;
+    return (null != (cache$ = doc(this).attr(&#x27;rel&#x27;)) ? cache$.toLowerCase() : void 0) === &#x27;shortcut icon&#x27;;
+  });
+  return tag.attr(&#x27;href&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.<span class="apidocCodeKeywordSpan">favicon</span>());
+```
+
+Some of these data elements require calculating intermediate representations
+of the html document. Everything is cached so looking up multiple data elements
+and looking them up multiple times should be as fast as possible.
+
+### Demo
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.image" id="apidoc.element.unfluff.extractor.image">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>image
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">image = function (doc) {
+  var images;
+  images = doc(&#x22;meta[property=&#x27;og:image&#x27;], meta[itemprop=image], meta[name=&#x27;twitter:image:src&#x27;], meta[name=&#x27;twitter:image&#x27;], meta
+[name=&#x27;twitter:image0&#x27;]&#x22;);
+  if (images.length &#x3e; 0 &#x26;&#x26; images.first().attr(&#x27;content&#x27;))
+    return images.first().attr(&#x27;content&#x27;);
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.<span class="apidocCodeKeywordSpan">image</span>());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.favicon());
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.keywords" id="apidoc.element.unfluff.extractor.keywords">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>keywords
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keywords = function (doc) {
+  var tag;
+  tag = doc(&#x27;meta[name=keywords]&#x27;);
+  if (null != tag)
+    return tag.attr(&#x27;content&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.lang" id="apidoc.element.unfluff.extractor.lang">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>lang
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lang = function (doc) {
+  var cache$, l, tag, value;
+  l = null != (cache$ = doc(&#x27;html&#x27;)) ? cache$.attr(&#x27;lang&#x27;) : void 0;
+  if (!l) {
+    tag = doc(&#x27;meta[name=lang]&#x27;) || doc(&#x27;meta[http-equiv=content-language]&#x27;);
+    l = null != tag ? tag.attr(&#x27;content&#x27;) : void 0;
+  }
+  if (l) {
+    value = l.slice(0, +1 + 1 || 9e9);
+    if (/^[A-Za-z]{2}$/.test(value))
+      return value.toLowerCase();
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.<span class="apidocCodeKeywordSpan">lang</span>());
+console.log(data.description());
+console.log(data.favicon());
+```
+
+Some of these data elements require calculating intermediate representations
+of the html document. Everything is cached so looking up multiple data elements
+and looking them up multiple times should be as fast as possible.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.links" id="apidoc.element.unfluff.extractor.links">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>links
+        <span class="apidocSignatureSpan">(doc, topNode, lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">links = function (doc, topNode, lang) {
+  var gatherLinks, links;
+  links = [];
+  gatherLinks = function (doc, topNode) {
+    var nodes;
+    nodes = topNode.find(&#x27;a&#x27;);
+    return nodes.each(function () {
+      var href, text;
+      href = doc(this).attr(&#x27;href&#x27;);
+      text = doc(this).html();
+      if (href &#x26;&#x26; text)
+        return links.push({
+          text: text,
+          href: href
+        });
+    });
+  };
+  if (topNode) {
+    topNode = postCleanup(doc, topNode, lang);
+    gatherLinks(doc, topNode);
+  }
+  return links;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.publisher" id="apidoc.element.unfluff.extractor.publisher">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>publisher
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publisher = function (doc) {
+  var cache$, cache$1, publisherCandidates;
+  publisherCandidates = doc(&#x22;meta[property=&#x27;og:site_name&#x27;],     meta[name=&#x27;dc.publisher&#x27;],     meta[name=&#x27;DC.publisher&#x27;],     meta
+[name=&#x27;DC.Publisher&#x27;]&#x22;);
+  if (null != publisherCandidates &#x26;&#x26; null != (cache$ = publisherCandidates.first()) &#x26;&#x26; null != (cache$1 = cache$.attr(&#x27;content&#x27;)))
+    return cache$1.trim();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.<span class="apidocCodeKeywordSpan">publisher</span>());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.softTitle" id="apidoc.element.unfluff.extractor.softTitle">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>softTitle
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">softTitle = function (doc) {
+  var titleText;
+  titleText = rawTitle(doc);
+  return cleanTitle(titleText, [
+    &#x27;|&#x27;,
+    &#x27; - &#x27;,
+    &#x27;\xbb&#x27;
+  ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+extractor = require(&#x27;unfluff&#x27;);
+
+data = extractor.lazy(my_html_data, &#x27;en&#x27;);
+
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.<span class="apidocCodeKeywordSpan">softTitle</span>());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.tags" id="apidoc.element.unfluff.extractor.tags">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>tags
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tags = function (doc) {
+  var elements, tags;
+  elements = doc(&#x22;a[rel=&#x27;tag&#x27;]&#x22;);
+  if (elements.length === 0) {
+    elements = doc(&#x22;a[href*=&#x27;/tag/&#x27;], a[href*=&#x27;/tags/&#x27;], a[href*=&#x27;/topic/&#x27;], a[href*=&#x27;?keyword=&#x27;]&#x22;);
+    if (elements.length === 0)
+      return [];
+  }
+  tags = [];
+  elements.each(function () {
+    var el, tag;
+    el = doc(this);
+    tag = el.text().trim();
+    tag.replace(/[\s\t\n]+/g, &#x27;&#x27;);
+    if (tag &#x26;&#x26; tag.length &#x3e; 0)
+      return tags.push(tag);
+  });
+  return _.uniq(tags);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.<span class="apidocCodeKeywordSpan">tags</span>());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.favicon());
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.text" id="apidoc.element.unfluff.extractor.text">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>text
+        <span class="apidocSignatureSpan">(doc, topNode, lang)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function (doc, topNode, lang) {
+  if (topNode) {
+    topNode = postCleanup(doc, topNode, lang);
+    return formatter(doc, topNode, lang);
+  } else {
+    return &#x27;&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Access whichever data elements you need directly.
+console.log(data.title());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.<span class="apidocCodeKeywordSpan">text</span>());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.videos());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.favicon());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.title" id="apidoc.element.unfluff.extractor.title">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>title
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">title = function (doc) {
+  var titleText;
+  titleText = rawTitle(doc);
+  return cleanTitle(titleText, [
+    &#x27;|&#x27;,
+    &#x27; - &#x27;,
+    &#x27;\xbb&#x27;,
+    &#x27;:&#x27;
+  ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+extractor = require(&#x27;unfluff&#x27;);
+
+data = extractor.lazy(my_html_data, &#x27;en&#x27;);
+
+// Access whichever data elements you need directly.
+console.log(data.<span class="apidocCodeKeywordSpan">title</span>());
+console.log(data.softTitle());
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.extractor.videos" id="apidoc.element.unfluff.extractor.videos">
+        function <span class="apidocSignatureSpan">unfluff.extractor.</span>videos
+        <span class="apidocSignatureSpan">(doc, topNode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">videos = function (doc, topNode) {
+  var candidates, results, urls, videoList;
+  videoList = [];
+  candidates = doc(topNode).find(&#x27;iframe, embed, object, video&#x27;);
+  candidates.each(function () {
+    var candidate, tag;
+    candidate = doc(this);
+    tag = candidate[0].name;
+    if (tag === &#x27;embed&#x27;) {
+      if (candidate.parent() &#x26;&#x26; candidate.parent()[0].name === &#x27;object&#x27;) {
+        return videoList.push(getObjectTag(doc, candidate));
+      } else {
+        return videoList.push(getVideoAttrs(doc, candidate));
+      }
+    } else if (tag === &#x27;object&#x27;) {
+      return videoList.push(getObjectTag(doc, candidate));
+    } else if (tag === &#x27;iframe&#x27; || tag === &#x27;video&#x27;) {
+      return videoList.push(getVideoAttrs(doc, candidate));
+    }
+  });
+  urls = [];
+  results = [];
+  _.each(videoList, function (vid) {
+    if (vid &#x26;&#x26; vid.height &#x26;&#x26; vid.width &#x26;&#x26; urls.indexOf(vid.src) === -1) {
+      results.push(vid);
+      return urls.push(vid.src);
+    }
+  });
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(data.date());
+console.log(data.copyright());
+console.log(data.author());
+console.log(data.publisher());
+console.log(data.text());
+console.log(data.image());
+console.log(data.tags());
+console.log(data.<span class="apidocCodeKeywordSpan">videos</span>());
+console.log(data.canonicalLink());
+console.log(data.lang());
+console.log(data.description());
+console.log(data.favicon());
+```
+
+Some of these data elements require calculating intermediate representations
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
