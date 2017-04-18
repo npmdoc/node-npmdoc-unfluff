@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.unfluff.unfluff">
+            function <span class="apidocSignatureSpan"></span>unfluff
+            <span class="apidocSignatureSpan">(html, language)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.unfluff.lazy">
             function <span class="apidocSignatureSpan">unfluff.</span>lazy
             <span class="apidocSignatureSpan">(html, language)</span>
@@ -239,6 +248,44 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.unfluff" id="apidoc.module.unfluff">module unfluff</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unfluff.unfluff" id="apidoc.element.unfluff.unfluff">
+        function <span class="apidocSignatureSpan"></span>unfluff
+        <span class="apidocSignatureSpan">(html, language)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unfluff = function (html, language) {
+  var doc, lng, pageData, topNode;
+  doc = cheerio.load(html);
+  lng = language || extractor.lang(doc);
+  pageData = {
+    title: extractor.title(doc),
+    softTitle: extractor.softTitle(doc),
+    date: extractor.date(doc),
+    author: extractor.author(doc),
+    publisher: extractor.publisher(doc),
+    copyright: extractor.copyright(doc),
+    favicon: extractor.favicon(doc),
+    description: extractor.description(doc),
+    keywords: extractor.keywords(doc),
+    lang: lng,
+    canonicalLink: extractor.canonicalLink(doc),
+    tags: extractor.tags(doc),
+    image: extractor.image(doc)
+  };
+  cleaner(doc);
+  topNode = extractor.calculateBestNode(doc, lng);
+  pageData.videos = extractor.videos(doc, topNode);
+  pageData.links = extractor.links(doc, topNode, lng);
+  pageData.text = extractor.text(doc, topNode, lng);
+  return pageData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
