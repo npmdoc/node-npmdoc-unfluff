@@ -382,21 +382,23 @@
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  "favicon": "http://cdn1.vox-cdn.com/community_logos/42931/favicon.ico",
-  "links": [
-    { "text": "Six Thirty", "href": "http://www.sixthirty.co/" }
-  ]
-}
-```
+### 0.9.0
+* Bulleted lists in a webpage are now retained in the output.
 
-#### `extractor.<span class="apidocCodeKeywordSpan">lazy</span>(html, language)`
+### 0.8.0
+* Prefer &amp;lt;meta&amp;gt; og:title tag to &amp;lt;title&amp;gt; element when parsing title of document (Thanks to bradvogel
+)
 
-Lazy version of `extractor(html, language)`.
+### 0.7.0
+* Added extractor.<span class="apidocCodeKeywordSpan">lazy</span>() function for lazy access to document properties (Thanks to franza
+)
 
-The text extraction algorithm can be somewhat slow on large documents.  If you
-only need access to elements like `title` or `image`, you can use the
-lazy extractor to get them more quickly without running the full processing
-pipeline.
+### 0.6.1
+* Added Thai stopwords (Thanks to thangman22)
+
+### 0.6.0
+* If you specify a language that isn't supported, fall back to english and warn the user (Thanks to mhuebert for [#12](https
+://github.com/ageitgey/node-unfluff/pull/12))
 ...</pre></li>
     </ul>
 
