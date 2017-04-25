@@ -1,6 +1,6 @@
 # npmdoc-unfluff
 
-#### api documentation for  [unfluff (v1.1.0)](https://github.com/ageitgey/node-unfluff)  [![npm package](https://img.shields.io/npm/v/npmdoc-unfluff.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-unfluff) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-unfluff.svg)](https://travis-ci.org/npmdoc/node-npmdoc-unfluff)
+#### basic api documentation for  [unfluff (v1.1.0)](https://github.com/ageitgey/node-unfluff)  [![npm package](https://img.shields.io/npm/v/npmdoc-unfluff.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-unfluff) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-unfluff.svg)](https://travis-ci.org/npmdoc/node-npmdoc-unfluff)
 
 #### A web page content extractor
 
